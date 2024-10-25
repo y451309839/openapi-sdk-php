@@ -569,6 +569,13 @@ class CreateContainerGroup extends Rpc
         return $this;
     }
 
+    public function withEphemeralStorage($value)
+    {
+        $this->data['EphemeralStorage'] = $value;
+        $this->options['query']['EphemeralStorage'] = $value;
+        return $this;
+    }
+
     /**
      * @param array $hostAliase
      *
